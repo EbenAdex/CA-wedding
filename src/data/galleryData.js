@@ -1,8 +1,4 @@
 // Import images and videos from the src folder
-import Wedding from '../images/gallery/wedding.mp4'
-import court1 from '../images/gallery/court1.jpg'
-import Memory from '../images/gallery/memory.mp4';
-
 import C01 from '../images/gallery/court/C01.jpg';
 import C02 from '../images/gallery/court/C02.jpg';
 import C03 from '../images/gallery/court/C03.jpg';
@@ -26,7 +22,7 @@ import C20 from '../images/gallery/court/C20.jpg';
 import C21 from '../images/gallery/court/C21.jpg';
 import C22 from '../images/gallery/court/C22.jpg';
 import C23 from '../images/gallery/court/C23.jpg';
-import C24 from '../images/gallery/court/c24.jpg';
+import C24 from '../images/gallery/court/C24.jpg';
 import C25 from '../images/gallery/court/C25.jpg';
 import C26 from '../images/gallery/court/C26.jpg';
 import C27 from '../images/gallery/court/C27.jpg';
@@ -100,7 +96,7 @@ const proposalFiles = Object.keys(modules).sort().map((k) => {
 
 const Proposal = proposalFiles.map((src) => {
   const ext = String(src).split('.').pop().toLowerCase();
-  return (ext === 'mov' || ext === 'webm') ? { type: 'video', src } : { type: 'image', src };
+   return (['mp4','webm','mov'].includes(ext)) ? { type: 'video', src } : { type: 'image', src };
 });
 
 
