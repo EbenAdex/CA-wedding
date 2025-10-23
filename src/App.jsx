@@ -3,7 +3,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
-import weddingDay from './videos/weddingDay.mp4';
+import WeddingDay from './videos/WeddingDay.mp4';
 import EventSchedule from './components/EventSchedule';
 import Contact from './pages/Contact';
 import './App.css';
@@ -24,7 +24,7 @@ function App() {
           playsInline
           className="background-video"
         >
-          <source src={weddingDay} type="video/mp4" />
+          <source src={WeddingDay} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       <BackgroundVideoControl />
